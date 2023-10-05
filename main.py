@@ -119,11 +119,14 @@ while (game_over != False):
                   "\t Рост 170 см\n"
                   "\t Занимается легкой атлетикой")
             command = input("Выбрать игрока (ДА\НЕТ)>> ").lower()
-            if "да" in command:
+            match command:
+              case "да" :
                 Amalia_check()
                 game_over = False
-            if "нет" in command:
+              case "нет" :
                 continue
+              case _:
+                  print("я так не играю")
 
         case "2":
             print("Виталий - сын маминой подруги \n"
