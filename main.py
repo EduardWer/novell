@@ -173,7 +173,7 @@ def Vitaliy_check():
 
 def Kirill_check():
     print("Вы серьёзно думаете что миллиардер будет лезть в школу за ответами на ЕГЭ ?????")
-
+    return
 
 game_over = True
 print("Новелла !!!\n"
