@@ -217,7 +217,7 @@ print(f"Вам на выбор даётся 3 героя \n"
       f"1:{gerois[0]},2:{gerois[1]},3:{gerois[2]}")  # незнаю зачем я так сделал (захотелось)
 print("Для выхода напишите \"Выход\"")
 while (game_over != False):
-    my_geroi = input("Выберите своего героя>> ").lower()
+    my_geroi = input("Выберите своего героя>> \n").lower()
     match my_geroi:
         case "1":
             print("Амалия - тенейджер которая курит вейп \n"
