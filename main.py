@@ -1,7 +1,7 @@
 import csv
 import json
 import random
-import pandas as pd
+
 hero = {}
 
 def check_salary(name="name"):
@@ -14,14 +14,16 @@ def check_salary(name="name"):
                 print(f" {character_name}  Описание персонажа: {character_description}\n")
 
 def dict_to_csv(file_name, name,opisanie):
-    len = []
-    len.append(name)
-    len.append(opisanie)
-    with open(file_name,'w',newline="") as file:
+    pass
+
+def append_data_to_csv(filename, name, opisanie):
+    data = []
+    data.append(name)
+    data.append(opisanie)
+    # Открытие файла в режиме 'a' для добавления данных
+    with open(filename, 'a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(len)
-
-
+        writer.writerow(data)
 
 def create_json(names, opisanie):
     data = {}
@@ -317,7 +319,7 @@ while (game_over != False):
             names = input("Введите имя своего персонажа >>")
             opisanie = input("Введите кто ваш герой по жизни >>")
             create_json(names=names,opisanie=opisanie)
-            dict_to_csv('player_history.csv',name=names,opisanie=opisanie)
+            append_data_to_csv('player_history.csv',name=names,opisanie=opisanie)
 
 
         case "5":
